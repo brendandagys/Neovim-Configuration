@@ -33,3 +33,5 @@ vim.opt.updatetime = 50
 vim.g.mapleader = " "
 
 vim.opt.fillchars:append { diff = "/" }
+
+vim.api.nvim_set_option("clipboard","unnamed")
