@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+--vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -34,4 +34,8 @@ vim.g.mapleader = " "
 
 vim.opt.fillchars:append { diff = "/" }
 
-vim.api.nvim_set_option("clipboard","unnamed")
+vim.api.nvim_set_option("clipboard", "unnamed")
+
+vim.opt.formatoptions:remove('r') -- No prefix after \n on comment
+vim.opt.formatoptions:remove('c') -- Indent-related
+vim.opt.formatoptions:remove('o')

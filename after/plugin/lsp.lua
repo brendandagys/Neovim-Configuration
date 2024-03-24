@@ -4,6 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'bashls',
+  'clangd',
   'cssls',
   'dockerls',
   'graphql',
