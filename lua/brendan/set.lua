@@ -1,7 +1,7 @@
 --vim.opt.guicursor = ""
 
 vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -36,6 +36,8 @@ vim.opt.fillchars:append { diff = "/" }
 
 vim.api.nvim_set_option("clipboard", "unnamed")
 
-vim.opt.formatoptions:remove('r') -- No prefix after \n on comment
-vim.opt.formatoptions:remove('c') -- Indent-related
-vim.opt.formatoptions:remove('o')
+-- No prefix after \n on comment
+vim.cmd([[autocmd BufEnter * set formatoptions-=r]])
+-- Indentation-related
+vim.cmd([[autocmd BufEnter * set formatoptions-=c]])
+vim.cmd([[autocmd BufEnter * set formatoptions-=o]])
